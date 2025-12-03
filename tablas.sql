@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS lineascompra (
 CREATE TABLE IF NOT EXISTS respuestas (
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     texto TEXT NOT NULL,
-    fecha DATE NOT NULL DEFAULT CURDATE(),
+    fecha DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     comentario_id INT(11) NOT NULL,
     usuario_id INT(11) NOT NULL,
     FOREIGN KEY (comentario_id) REFERENCES comentarios(id)
