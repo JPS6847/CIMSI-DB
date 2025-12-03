@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     contrasenya VARCHAR(255) NOT NULL,
     email VARCHAR(100) NOT NULL,
     fecha_registro DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
-    fotoPerfil TEXT NOT NULL DEFAULT 'images/perfiles/default_profile.png'
+    fotoPerfil VARCHAR(5000) NOT NULL DEFAULT 'images/perfiles/default_profile.png'
 );
 
 CREATE TABLE IF NOT EXISTS partituras (
