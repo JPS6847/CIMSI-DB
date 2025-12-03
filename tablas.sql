@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS partituras (
 CREATE TABLE IF NOT EXISTS valoraciones (
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     numEstrellas INT(11) NOT NULL,
-    fecha DATE NOT NULL DEFAULT CURDATE(),
+    fecha DATETIMME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     partitura_id INT(11) NOT NULL,
     usuario_id INT(11) NULL,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
